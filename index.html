@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, Jassu!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&family=Noto+Serif+Gurmukhi:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- Soft floating hearts (CSS) -->
+    <div class="floating-hearts" aria-hidden="true">
+      <span class="heart heart-1">♥</span>
+      <span class="heart heart-2">♥</span>
+      <span class="heart heart-3">♥</span>
+      <span class="heart heart-4">♥</span>
+      <span class="heart heart-5">♥</span>
+      <span class="heart heart-6">♥</span>
+    </div>
+
+    <!-- Corner flowers -->
+    <img
+      class="deco flower flower-tl"
+      src="images/pink flower sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco flower flower-tr"
+      src="images/pink flower sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco flower flower-bl"
+      src="images/pink flower sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco flower flower-br"
+      src="images/pink flower sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <!-- Left balloons -->
+    <img
+      class="deco balloon balloon-l1"
+      src="images/pink balloon png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco balloon balloon-l2"
+      src="images/pink balloon png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco balloon balloon-l3"
+      src="images/pink balloon png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <!-- Right balloons -->
+    <img
+      class="deco balloon balloon-r1"
+      src="images/pink balloon png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco balloon balloon-r2"
+      src="images/pink balloon png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco balloon balloon-r3"
+      src="images/pink balloon png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <!-- Sparkles -->
+    <img
+      class="deco sparkle sparkle-1"
+      src="images/sparkle sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco sparkle sparkle-2"
+      src="images/sparkle sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco sparkle sparkle-3"
+      src="images/sparkle sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco sparkle sparkle-4"
+      src="images/sparkle sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco sparkle sparkle-5"
+      src="images/sparkle sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="deco sparkle sparkle-6"
+      src="images/sparkle sticker png transparent.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <!-- Soft screen transition veil -->
+    <div id="screen-veil" class="screen-veil" aria-hidden="true"></div>
+
+    <!-- ===== SCREEN 1: Welcome ===== -->
+    <section id="screen-welcome" class="screen is-active" aria-label="Welcome">
+      <div class="screen-inner">
+        <img
+          class="bow"
+          src="images/cute pink bow png transparent.jpg"
+          alt="Pink bow"
+        />
+
+        <h1 class="title">Heyyy Birthday Girl... 👀🎀</h1>
+
+        <p class="subtitle">
+          I have something special for you... but you can't get it that easily 😌
+        </p>
+
+        <button type="button" id="start-btn" class="start-btn">
+          🎁 START THE BIRTHDAY ADVENTURE
+        </button>
+
+        <div class="bottom-stickers">
+          <img
+            class="teddy"
+            src="images/cute teddy bear sticker png.jpg"
+            alt="Cute teddy bear"
+          />
+          <img
+            class="cake"
+            src="images/cute birthday cake sticker png.jpg"
+            alt="Birthday cake"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 2: Are you Jassu? ===== -->
+    <section id="screen-verify" class="screen" aria-label="Identity check" hidden>
+      <div class="screen-inner verify-inner">
+        <div class="verify-intro">
+          <img
+            class="bow bow-small"
+            src="images/cute pink bow png transparent.jpg"
+            alt=""
+            aria-hidden="true"
+          />
+
+          <h1 class="title title-md">Okayyy, let's begin! 🎀✨</h1>
+
+          <p class="teaser">But waitttt... 🤨</p>
+
+          <p class="subtitle verify-copy">
+            Before I give you your birthday surprise, I need to make sure it's actually you...
+          </p>
+        </div>
+
+        <div id="verify-main" class="verify-main">
+          <h2 class="question">Are you really Jassu? 👀</h2>
+
+          <div class="choice-buttons" id="choice-buttons">
+            <button type="button" class="choice-btn" data-response="Hmmm... sounds suspicious 🤨😂">
+              😇 Yes, obviously!
+            </button>
+            <button type="button" class="choice-btn" data-response="Correct answer, Your Majesty 👑😂">
+              👸 I am the Birthday Queen!
+            </button>
+            <button type="button" class="choice-btn" data-response="Okay okayyy, calm down 😂 I believe you!">
+              🤨 Who else would I be?!
+            </button>
+            <button type="button" id="not-jassu-btn" class="choice-btn not-jassu-btn">
+              🚪 Umm... I'm not Jassu
+            </button>
+          </div>
+
+          <div id="response-popup" class="response-popup" aria-live="polite" hidden>
+            <p id="response-text" class="response-text"></p>
+          </div>
+
+          <button type="button" id="continue-btn" class="start-btn continue-btn" hidden>
+            Okay, let me continue 👀 →
+          </button>
+        </div>
+
+        <!-- Not Jassu gate -->
+        <div id="not-jassu-result" class="not-jassu-result" hidden aria-live="polite">
+          <img
+            class="not-for-you-img"
+            src="images/not for u.gif"
+            alt="Not for you"
+          />
+          <p class="not-jassu-title">HEY YOUUU! 👀🚫</p>
+          <p class="not-jassu-msg">
+            Sorryyy... this birthday surprise is ONLY for Jassu! 🎀😂
+          </p>
+          <p class="not-jassu-hint">
+            Please return this website to the birthday girl immediately 🤦‍♀️👉
+          </p>
+          <button type="button" id="not-jassu-leave-btn" class="start-btn not-jassu-leave-btn">
+            🏃 Okay okay, I'm leaving!
+          </button>
+        </div>
+
+        <div class="verify-stickers" aria-hidden="true">
+          <img
+            class="gift-sticker"
+            src="images/pink gift box png transparent.jpg"
+            alt=""
+          />
+          <img
+            class="envelope-sticker"
+            src="images/cute envelope png transparent.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 3: Am I your cute sister? ===== -->
+    <section id="screen-sister" class="screen" aria-label="Cute sister question" hidden>
+      <div class="screen-inner sister-inner">
+        <div class="sister-intro">
+          <img
+            class="bow bow-small"
+            src="images/cute pink bow png transparent.jpg"
+            alt=""
+            aria-hidden="true"
+          />
+
+          <h1 class="title title-md">But waittt... one more very important question! 👀</h1>
+        </div>
+
+        <div id="sister-question-block" class="sister-question-block">
+          <h2 class="question">Am I your cute sister? 🥺🎀</h2>
+
+          <div id="sister-buttons" class="sister-buttons">
+            <button type="button" id="sister-yes-btn" class="choice-btn sister-yes-btn">
+              🥹 Yes, of course you are!
+            </button>
+            <button type="button" id="sister-no-btn" class="choice-btn sister-no-btn">
+              😒 Umm... no?
+            </button>
+          </div>
+        </div>
+
+        <!-- Floating angry reaction (shows while NO dodges) -->
+        <div id="sister-angry-popup" class="sister-angry-popup" hidden aria-live="polite">
+          <div class="angry-symbols" aria-hidden="true">
+            <span>💢</span><span>!!</span><span>💢</span><span>😤</span>
+          </div>
+          <img
+            id="angry-sticker"
+            class="angry-sticker"
+            src="images/angry.jpg"
+            alt="Angry face"
+          />
+          <p class="angry-title">EXCUSE MEEEE?! 😤</p>
+          <p class="angry-sub">Choose the correct answer, please. 🙄</p>
+        </div>
+
+        <!-- YES success state -->
+        <div id="sister-yes-result" class="sister-yes-result" hidden>
+          <div class="yes-burst-hearts" aria-hidden="true">
+            <span>💗</span><span>💕</span><span>💖</span><span>💗</span><span>✨</span><span>💕</span>
+          </div>
+          <div class="yes-stickers" aria-hidden="true">
+            <img
+              class="teddy"
+              src="images/cute teddy bear sticker png.jpg"
+              alt=""
+            />
+            <img
+              class="yes-sparkle"
+              src="images/sparkle sticker png transparent.jpg"
+              alt=""
+            />
+            <img
+              class="gift-sticker"
+              src="images/pink gift box png transparent.jpg"
+              alt=""
+            />
+          </div>
+          <img
+            class="shy-img"
+            src="images/shy.jpg"
+            alt="Shy"
+          />
+          <p class="response-text yes-main">AWWWW! I knew you loved me 🥹💗</p>
+          <p class="yes-sub">Good answer. You may continue 😌🎀</p>
+          <button type="button" id="sister-continue-btn" class="start-btn continue-btn is-visible">
+            Okayyy, continue 💌 →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 4: One little problem ===== -->
+    <section id="screen-problem" class="screen" aria-label="One little problem" hidden>
+      <div class="screen-inner problem-inner">
+        <img
+          class="bow bow-small"
+          src="images/cute pink bow png transparent.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <p id="problem-line-1" class="problem-line problem-line-1">
+          Okayyy... you passed the sister verification 😂🎀
+        </p>
+        <p id="problem-line-2" class="problem-line problem-line-2" hidden>
+          But there is one little problem... 🥹
+        </p>
+        <button type="button" id="what-problem-btn" class="start-btn what-problem-btn" hidden>
+          👀 What problem?
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 5: Canada → India distance ===== -->
+    <section id="screen-distance" class="screen" aria-label="Distance between us" hidden>
+      <div class="screen-inner distance-inner">
+        <div class="distance-map" aria-hidden="false">
+          <div class="place place-canada">
+            <img
+              class="place-img"
+              src="images/canada.jpg"
+              alt="Canada"
+            />
+            <p class="place-label">Me 🇨🇦</p>
+            <p class="place-sub">Somewhere in Canada</p>
+          </div>
+
+          <div class="travel-path">
+            <div class="path-line"></div>
+            <img class="plane" src="images/airplane.jpg" alt="" />
+            <img class="path-heart path-heart-1" src="images/heart.jpg" alt="" />
+            <img class="path-heart path-heart-2" src="images/heart.jpg" alt="" />
+            <img class="path-heart path-heart-3" src="images/heart.jpg" alt="" />
+          </div>
+
+          <div class="place place-india">
+            <img
+              class="place-img"
+              src="images/india.jpg"
+              alt="India"
+            />
+            <p class="place-label">Birthday Girl 🎂🇮🇳</p>
+            <p class="place-sub">Celebrating all the way in India</p>
+          </div>
+        </div>
+
+        <div class="distance-story" id="distance-story">
+          <p class="story-line" data-delay="0">You are all the way there... 🥺</p>
+          <p class="story-line" data-delay="900">And I'm all the way over here... 🇨🇦</p>
+          <p class="story-line" data-delay="1800">There's a whole lot of distance between us...</p>
+          <p class="story-line story-pause" data-delay="3000">But unfortunately for you...</p>
+          <p class="story-line story-dramatic" data-delay="4200">
+            DISTANCE DOES NOT STOP ME FROM ANNOYING YOU 😂💗
+          </p>
+          <p class="story-line" data-delay="5600">
+            I really wish I could be there to celebrate with you today. 🥹🎂
+          </p>
+          <p class="story-line" data-delay="6800">
+            So since I can't physically give you this birthday surprise...
+          </p>
+          <p class="story-line story-final" data-delay="8000">
+            I made you this instead. 💌❤️
+          </p>
+        </div>
+
+        <button
+          type="button"
+          id="open-surprise-btn"
+          class="start-btn open-surprise-btn"
+          hidden
+        >
+          🎁 OPEN MY SURPRISE
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 6: Memory lane teaser ===== -->
+    <section id="screen-memory-teaser" class="screen" aria-label="Memory lane teaser" hidden>
+      <div class="screen-inner memory-teaser-inner">
+        <img
+          class="bow bow-small"
+          src="images/cute pink bow png transparent.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <h1 class="title title-md">Ready for a little trip down memory lane? 👀📸</h1>
+        <button type="button" id="memory-go-btn" class="start-btn">
+          📸 Let's go!
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 7: Memory box intro ===== -->
+    <section id="screen-memory-intro" class="screen" aria-label="Memory box intro" hidden>
+      <div class="screen-inner memory-intro-inner">
+        <img
+          class="bow bow-small"
+          src="images/cute pink bow png transparent.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <h1 class="title title-md">Okayyy… let's open our little memory box 📦💗</h1>
+        <p class="subtitle memory-intro-sub">
+          I only picked a few… but each one comes with a story 👀💌
+        </p>
+        <button type="button" id="open-memories-btn" class="start-btn">
+          📦 Open the memories!
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 8: Memory cards ===== -->
+    <section id="screen-memory-cards" class="screen" aria-label="Memory cards" hidden>
+      <div class="screen-inner memory-cards-inner">
+        <h2 class="memory-cards-heading">Our little memory box 📦✨</h2>
+
+        <div class="memory-cards" id="memory-cards">
+          <button type="button" class="memory-card" data-memory="childhood">
+            <span class="memory-card-frame" aria-hidden="true"></span>
+            <img
+              class="memory-card-deco"
+              src="images/polaroid frame png transparent.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="memory-card-title">👶 Where it all started…</span>
+            <span class="memory-card-hint">Tap to open 💌</span>
+          </button>
+
+          <button type="button" class="memory-card" data-memory="together">
+            <span class="memory-card-frame" aria-hidden="true"></span>
+            <img
+              class="memory-card-deco"
+              src="images/cute envelope png transparent.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="memory-card-title">💕 Still stuck with me</span>
+            <span class="memory-card-hint">Tap to open 💌</span>
+          </button>
+
+          <button type="button" class="memory-card" data-memory="video">
+            <span class="memory-card-frame" aria-hidden="true"></span>
+            <img
+              class="memory-card-deco"
+              src="images/sparkle sticker png transparent.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="memory-card-title">🎥 Okay… THIS one 😂👀</span>
+            <span class="memory-card-hint">Tap to open 💌</span>
+          </button>
+        </div>
+
+        <button type="button" id="emotional-damage-btn" class="start-btn emotional-damage-btn">
+          🥹 Okay… enough emotional damage
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 8.4: Sibling quiz ===== -->
+    <section id="screen-quiz" class="screen" aria-label="Sibling quiz" hidden>
+      <div class="screen-inner quiz-inner">
+        <img
+          class="bow bow-small"
+          src="images/cute pink bow png transparent.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <div id="quiz-intro" class="quiz-intro">
+          <p class="quiz-kicker">Sibling Quiz 🎀</p>
+          <h1 class="title title-md">Okay... let's see how well you remember us 😂❤️</h1>
+          <p class="subtitle quiz-intro-copy">
+            How well do you remember our chaotic childhood together?
+          </p>
+          <button type="button" id="quiz-start-btn" class="start-btn">
+            Start the Sibling Quiz
+          </button>
+        </div>
+
+        <div id="quiz-play" hidden>
+          <p class="quiz-progress" id="quiz-progress">Question 1 of 6</p>
+          <div class="quiz-progress-track" aria-hidden="true">
+            <span id="quiz-progress-fill" class="quiz-progress-fill"></span>
+          </div>
+
+          <article class="quiz-card" id="quiz-card">
+            <div class="quiz-photo-wrap">
+              <img
+                id="quiz-photo"
+                class="quiz-photo"
+                alt="A chaotic sibling memory"
+              />
+            </div>
+
+            <p class="quiz-question" id="quiz-question"></p>
+
+            <div class="quiz-options" id="quiz-options"></div>
+
+            <div id="quiz-result" class="quiz-result" hidden aria-live="polite">
+              <div class="quiz-result-emoji" id="quiz-result-emoji" aria-hidden="true"></div>
+              <p class="quiz-result-text" id="quiz-result-text"></p>
+            </div>
+
+            <button type="button" id="quiz-next" class="start-btn continue-btn quiz-next" hidden>
+              Next Question →
+            </button>
+          </article>
+        </div>
+
+        <div id="quiz-complete" class="quiz-complete quiz-card" hidden>
+          <p class="quiz-complete-score" id="quiz-complete-score"></p>
+          <p class="quiz-complete-title" id="quiz-complete-title"></p>
+          <p class="subtitle quiz-complete-copy" id="quiz-complete-copy"></p>
+          <button type="button" id="quiz-play-again-btn" class="choice-btn quiz-play-again-btn">
+            Play Again 🔄
+          </button>
+          <button type="button" id="quiz-continue-btn" class="start-btn continue-btn is-visible">
+            Okayyy... now this ❤️ →
+          </button>
+        </div>
+      </div>
+
+      <div id="quiz-confetti" class="quiz-confetti gift-burst" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SCREEN 8.45: Blow the candles ===== -->
+    <section id="screen-candles" class="screen" aria-label="Blow out the candles" hidden>
+      <div class="screen-inner wish-inner">
+        <img
+          class="bow bow-small"
+          src="images/cute pink bow png transparent.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <p class="wish-kicker">Before your surprise... 🎂</p>
+        <h1 class="title title-md wish-title">Make a wish and blow out the candles! 🕯️</h1>
+        <p id="candles-hint" class="subtitle wish-sub">
+          Tap the candles to blow them out 🕯️
+        </p>
+
+        <div
+          id="wish-cake-stage"
+          class="wish-cake-stage"
+          role="button"
+          tabindex="0"
+          aria-label="Birthday cake with lit candles. Tap or blow to put them out."
+        >
+          <div class="wish-cake" aria-hidden="true">
+            <div class="wish-candles">
+              <span class="wish-candle c1"><i class="wish-flame"></i><i class="wish-glow"></i><i class="wish-smoke"></i></span>
+              <span class="wish-candle c2"><i class="wish-flame"></i><i class="wish-glow"></i><i class="wish-smoke"></i></span>
+              <span class="wish-candle c3"><i class="wish-flame"></i><i class="wish-glow"></i><i class="wish-smoke"></i></span>
+              <span class="wish-candle c4"><i class="wish-flame"></i><i class="wish-glow"></i><i class="wish-smoke"></i></span>
+              <span class="wish-candle c5"><i class="wish-flame"></i><i class="wish-glow"></i><i class="wish-smoke"></i></span>
+            </div>
+            <div class="wish-cake-top"></div>
+            <div class="wish-cake-frosting"></div>
+            <div class="wish-cake-body">
+              <span class="wish-sprinkle s1"></span>
+              <span class="wish-sprinkle s2"></span>
+              <span class="wish-sprinkle s3"></span>
+              <span class="wish-sprinkle s4"></span>
+              <span class="wish-sprinkle s5"></span>
+              <span class="wish-sprinkle s6"></span>
+            </div>
+            <div class="wish-cake-plate"></div>
+          </div>
+          <div id="wish-sparkles" class="gift-burst" aria-hidden="true"></div>
+        </div>
+
+        <div id="candles-mic-panel" class="mic-panel candles-mic-panel">
+          <div class="mic-meter" aria-hidden="true">
+            <span id="candles-mic-level" class="mic-level"></span>
+          </div>
+          <p id="candles-mic-status" class="mic-hint">You can also blow into the mic if it asks 🎤</p>
+        </div>
+
+        <p id="wish-granted" class="wish-granted" hidden>WISH GRANTED! ✨❤️</p>
+
+        <button type="button" id="candles-continue-btn" class="start-btn continue-btn" hidden>
+          Okay... what's my surprise? 👀🎁
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 8.46: Surprise gift box ===== -->
+    <section id="screen-surprise" class="screen" aria-label="Your surprise" hidden>
+      <div class="screen-inner surprise-inner">
+        <img
+          class="bow bow-small"
+          src="images/cute pink bow png transparent.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <h1 class="title title-md surprise-title">Wait... there's one more thing... 👀</h1>
+        <p id="surprise-closed-hint" class="subtitle gift-instruction">Open me... 👀🎁</p>
+
+        <div id="surprise-stage" class="surprise-stage">
+          <button
+            type="button"
+            id="surprise-box"
+            class="surprise-box"
+            aria-label="Open your surprise gift box"
+          >
+            <span class="surprise-lid">
+              <span class="surprise-lid-face"></span>
+              <span class="surprise-bow-knot"></span>
+              <span class="surprise-bow-left"></span>
+              <span class="surprise-bow-right"></span>
+            </span>
+            <span class="surprise-body">
+              <span class="surprise-ribbon-v"></span>
+              <span class="surprise-ribbon-h"></span>
+            </span>
+          </button>
+          <div id="surprise-burst" class="gift-burst" aria-hidden="true"></div>
+        </div>
+
+        <button type="button" id="open-surprise-box-btn" class="start-btn">
+          Open your surprise 🎁
+        </button>
+
+        <div id="surprise-reveal" class="surprise-reveal" hidden>
+          <p class="surprise-twist">Plot twist... 😌❤️</p>
+          <p class="surprise-main">I am your surprise.</p>
+          <p class="surprise-sub">
+            You thought I was going to give you a gift?<br />
+            YOU GOT ME INSTEAD. 😂❤️
+          </p>
+          <p class="surprise-playful">Best surprise ever, right? 😌😂</p>
+        </div>
+
+        <button type="button" id="surprise-continue-btn" class="start-btn continue-btn" hidden>
+          Okay, now for the real surprise... ❤️
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 8.5: Final Shayari ===== -->
+    <section id="screen-shayari" class="screen" aria-label="A shayari for Jassu" hidden>
+      <div class="shayari-glow" aria-hidden="true"></div>
+      <div class="shayari-hearts" aria-hidden="true">
+        <span>💗</span><span>💕</span><span>✨</span><span>💗</span><span>💖</span>
+      </div>
+
+      <div class="screen-inner shayari-inner">
+        <p class="shayari-bridge">Okayyy... enough fighting and teasing 🥹</p>
+        <p class="shayari-bridge-sub">Now here's what you really mean to me.</p>
+
+        <img
+          class="shayari-photo"
+          src="images/A nice photo together.jpeg"
+          alt=""
+        />
+
+        <h1 class="shayari-heading" lang="pa">ਤੇਰੇ ਲਈ... ❤️</h1>
+
+        <article class="shayari-poem" lang="pa">
+          <p class="shayari-stanza">ਦੁਨੀਆ ਲਈ ਤੂੰ ਭੈਣ ਏ ਮੇਰੀ, ਪਰ ਮੇਰੇ ਲਈ ਮਾ ਬਣਗੀ 
+ਮੈਨੂੰ ਤੱਤੀ ਵਾ ਨਾ ਲੱਗੇ ਇਸੇ ਲਈ ਤੂੰ ਛਾਂ ਬਣਗੀ 
+ਜਿੱਥੇ ਕੋਈ ਵੀ ਦੁੱਖ ਸੀ ਆਉਂਦਾ, ਤੂੰ ਓਦੇ ਮੂਹਰੇ ਆ ਤਣ ਗਈ 
+ਜਿੱਥੇ ਵੀ ਮੈਨੂੰ ਲੋੜ ਪਈ ਤੂੰ ਉਥੇ ਸੱਜੀ ਬਾਹ ਬਣਗੀ </p>
+
+          <p class="shayari-stanza">ਨਿੱਕੇ ਹੁੰਦੇ ਲੜਦੇ ਸੀ - ੨
+ਆਹ ਮੇਰਾ  ਆ, ਆ ਤੇਰਾ ਨਹੀਂ 
+ਜੇ ਤੂੰ ਮੇਰੀ ਚੀਜੀ ਖਾਲੀ , ਮੈਂ ਛੱਡਣਾ ਤੇਰਾ ਖਹਿੜਾ ਨੀ </p>
+
+          <p class="shayari-stanza">ਨਿੱਕੀਆਂ ਨਿੱਕੀਆਂ ਗੱਲਾਂ ਅੱਜ ਵੀ,ਚੇਤੇ ਕਰ ਕ ਹੱਸ ਪੈਂਦੀ 
+ਕਿੰਨਾ ਕਿੰਨਾ ਟਾਈਮ ਓ ਯਾਦ, ਮੇਰੇ ਖਿਆਲਾਂ ਦੇ ਵਿੱਚ ਹੀ ਰਹਿੰਦੀ </p>
+
+          <p class="shayari-stanza">ਕਾਸ਼ ਮੇਰੇ ਅੱਜ ਖੰਭ ਹੁੰਦੇ , ਉੱਡ ਕੇ ਤੇਰੇ ਕੋਲ ਆ ਬਹਿੰਦੀ 
+ਛੱਡ ਕ ਚਿੰਤਾ ਦੁਨੀਆ ਦੀ ਬੱਸ ਤੈਨੂੰ ਗਲ ਨਾਲ ਲਾ ਲੈਂਦੀ </p>
+
+          <p class="shayari-stanza">ਮੇਰੇ ਲਈ ਤੂੰ ਜੋ ਵੀ ਕੀਤਾ ਅੱਜ ਤੱਕ ਕਦੇ ਜਤਾਇਆ ਨੀ 
+ਜੇ ਸ਼ੁਕਰੀਆ ਤੇਰਾ ਕਰਨਾ ਹੋਵੇ , ਓ ਲਫ਼ਜ਼ ਮੇਰੇ ਕੋਲ ਆਇਆ ਨੀ </p>
+
+          <p class="shayari-stanza">ਕੇ ਲੰਬੀਆਂ ਉਮਰਾਂ ਮਾਣੇ ਤੂੰ ,ਬੱਸ ਇਹੀ ਦੁਆ ਏ ਮੇਰੀ
+ਹੋਰ ਕੀ ਆਖਾ , ਲਫ਼ਜ਼ ਨੀ ਹੈਗੇ, ਤੂੰ ਮੇਰੇ ਲਈ ਖ਼ੁਦਾ ਏ ਮੇਰੀ</p>
+        </article>
+
+        <div class="shayari-close">
+          <p class="shayari-birthday">Happy Birthday, Sister ❤️</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 9: Not done yet ===== -->
+    <section id="screen-not-done" class="screen" aria-label="Not done yet" hidden>
+      <div class="screen-inner not-done-inner">
+        <img
+          class="bow bow-small"
+          src="images/cute pink bow png transparent.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <h1 class="title title-md">But waittt… we're not done yet 👀🎀</h1>
+        <button type="button" id="real-surprise-btn" class="start-btn">
+          🎁 THE REAL SURPRISE
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 10: Gift box ===== -->
+    <section id="screen-gift" class="screen" aria-label="Open the gift" hidden>
+      <div class="screen-inner gift-inner">
+        <h1 class="title title-md gift-title">Waittt… one last thing 👀🎀</h1>
+        <p class="subtitle gift-subtitle">
+          A birthday gift shouldn't be opened that easily 😌
+        </p>
+
+        <div id="gift-stage" class="gift-stage">
+          <img
+            id="gift-box-img"
+            class="gift-box-img"
+            src="images/gift-box.jpg"
+            alt="Birthday gift box"
+          />
+          <div id="gift-burst" class="gift-burst" aria-hidden="true"></div>
+        </div>
+
+        <p class="gift-instruction">Go ahead… open it! 👀</p>
+
+        <button type="button" id="open-gift-btn" class="start-btn">
+          🎀 OPEN THE GIFT
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 11: Birthday reveal + blow the candles ===== -->
+    <section id="screen-birthday-reveal" class="screen" aria-label="Happy Birthday reveal" hidden>
+      <div class="screen-inner birthday-reveal-inner">
+        <p id="wish-kicker" class="wish-kicker">Wait wait wait… 👀</p>
+        <h1 id="wish-title" class="title title-md wish-title">
+          First… make a wish and blow the candles 🎂
+        </h1>
+        <p id="wish-sub" class="subtitle wish-sub">
+          Get close to the mic and BLOW like you’re cooling hot chai 😂
+        </p>
+
+        <div id="cake-stage" class="cake-stage">
+          <img
+            id="reveal-cake-img"
+            class="reveal-cake-img"
+            src="images/birthday-cake.jpg"
+            alt="Birthday cake"
+          />
+          <div class="candles" aria-hidden="true">
+            <span class="candle c1"><i class="flame"></i><i class="smoke"></i></span>
+            <span class="candle c2"><i class="flame"></i><i class="smoke"></i></span>
+            <span class="candle c3"><i class="flame"></i><i class="smoke"></i></span>
+            <span class="candle c4"><i class="flame"></i><i class="smoke"></i></span>
+            <span class="candle c5"><i class="flame"></i><i class="smoke"></i></span>
+          </div>
+          <div id="wish-burst" class="gift-burst" aria-hidden="true"></div>
+        </div>
+
+        <div id="mic-panel" class="mic-panel">
+          <div class="mic-meter" aria-hidden="true">
+            <span id="mic-level" class="mic-level"></span>
+          </div>
+          <p id="mic-hint" class="mic-hint">Allow the mic if it asks — I’m not eavesdropping from Canada, I swear 🇨🇦🎤</p>
+        </div>
+
+        <h1 id="birthday-reveal-title" class="title birthday-reveal-title" hidden>
+          🎂 HAPPY BIRTHDAY JASSU!!! 🥳🎉💗
+        </h1>
+        <p id="birthday-reveal-sub" class="subtitle birthday-reveal-sub" hidden>
+          Congratulationsss! You finally made it to the real surprise 😂🎀
+        </p>
+
+        <button type="button" id="blow-fallback-btn" class="choice-btn blow-fallback-btn">
+          😤 Mic is being dramatic. I’ll click instead.
+        </button>
+        <button type="button" id="show-message-btn" class="start-btn" hidden>
+          💌 Okayyy… show me!
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 12: Message intro ===== -->
+    <section id="screen-message-intro" class="screen" aria-label="Birthday message intro" hidden>
+      <div class="screen-inner message-intro-inner">
+        <img
+          class="bow bow-small"
+          src="images/cute pink bow png transparent.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <h1 class="title title-md">Before you read this… 🥹💗</h1>
+        <button type="button" id="open-message-btn" class="start-btn">
+          💌 Open my message
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 13: Birthday letter ===== -->
+    <section id="screen-letter" class="screen" aria-label="Birthday letter" hidden>
+      <div class="screen-inner letter-screen-inner">
+        <div id="letter-opening" class="letter-opening" aria-hidden="false">
+          <img
+            class="letter-envelope"
+            src="images/cute envelope png transparent.jpg"
+            alt="Cute envelope"
+          />
+          <p class="letter-opening-text">Opening your letter… 💌</p>
+        </div>
+
+        <article id="letter-card" class="letter-card" hidden>
+          <div class="letter-deco letter-deco-tl" aria-hidden="true">
+            <img src="images/pink flower sticker png transparent.jpg" alt="" />
+          </div>
+          <div class="letter-deco letter-deco-br" aria-hidden="true">
+            <img src="images/sparkle sticker png transparent.jpg" alt="" />
+          </div>
+
+          <div class="letter-scroll">
+            <h2 class="letter-heading">💌 For My Jassu...</h2>
+
+            <p>Happy Birthday, Jassu! 🎂💗</p>
+
+            <p>
+              I honestly wish I could be there with you today. It feels a little strange celebrating your birthday from so far away, while you're there in India and I'm all the way here in Canada. 🥹🇮🇳🇨🇦
+            </p>
+
+            <p>
+              I miss you, our moments, our talks, and even all the silly and annoying things we do 😂💗.
+            </p>
+
+            <p>
+              Even though there are so many kilometres between us right now, you're still one of the closest people to my heart. ❤️
+            </p>
+
+            <p>
+              I hope this new year of your life brings you lots of happiness, success, beautiful memories, and everything you truly wish for.
+            </p>
+
+            <p>
+              Keep smiling, keep being your dramatic self 😂, and don't change too much… because then who am I supposed to annoy? 😌😂
+            </p>
+
+            <p>And just so you know...</p>
+
+            <p class="letter-highlight">
+              No matter where I am in the world, you'll always be my little sister, and you'll always be stuck with me. 😂💗
+            </p>
+
+            <p>Happy Birthday again, Jassu! 🥹🎂🎀</p>
+
+            <p>Love youuuu so much ❤️</p>
+
+            <p class="letter-signoff">— Your annoying sister, all the way from Canada 🇨🇦💌</p>
+          </div>
+
+          <button type="button" id="one-more-thing-btn" class="start-btn one-more-thing-btn">
+            🥹 Wait... one more thing!
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SCREEN 14: Final celebration ===== -->
+    <section id="screen-finale" class="screen" aria-label="Final celebration" hidden>
+      <div class="finale-fx" aria-hidden="true">
+        <span class="finale-piece finale-heart">💗</span>
+        <span class="finale-piece finale-heart">💕</span>
+        <span class="finale-piece finale-heart">💖</span>
+        <span class="finale-piece finale-sparkle">✨</span>
+        <span class="finale-piece finale-sparkle">⭐</span>
+        <span class="finale-piece finale-sparkle">✨</span>
+        <span class="finale-piece finale-confetti">🎀</span>
+        <span class="finale-piece finale-confetti">🎉</span>
+        <span class="finale-piece finale-confetti">💗</span>
+        <span class="finale-piece finale-confetti">🥳</span>
+        <img class="finale-balloon finale-balloon-1" src="images/pink balloon png transparent.jpg" alt="" />
+        <img class="finale-balloon finale-balloon-2" src="images/pink balloon png transparent.jpg" alt="" />
+        <img class="finale-balloon finale-balloon-3" src="images/pink balloon png transparent.jpg" alt="" />
+        <img class="finale-balloon finale-balloon-4" src="images/pink balloon png transparent.jpg" alt="" />
+      </div>
+
+      <div class="screen-inner finale-inner">
+        <h1 class="title finale-title">🎉 HAPPY BIRTHDAY, JASSU!!! 🥳🎂🎉</h1>
+        <p class="subtitle finale-sub">
+          Congratulations! You successfully completed the Jassu Birthday Adventure 😂🎀
+        </p>
+        <p class="finale-prize">
+          Your final prize: You get to have ME as your sister forever 😌💗
+        </p>
+        <button type="button" id="play-again-btn" class="start-btn">
+          🔄 Play again!
+        </button>
+      </div>
+    </section>
+
+    <!-- Memory modals -->
+    <div id="memory-modal" class="memory-modal" hidden aria-hidden="true">
+      <div class="memory-modal-backdrop" data-close-memory></div>
+      <div class="memory-modal-panel" role="dialog" aria-modal="true" aria-labelledby="memory-modal-title">
+        <h3 id="memory-modal-title" class="memory-modal-title"></h3>
+
+        <div id="memory-modal-media" class="memory-modal-media"></div>
+
+        <p id="memory-modal-message" class="memory-modal-message"></p>
+
+        <button type="button" id="memory-modal-close" class="start-btn memory-modal-close">
+          Close 💌
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
